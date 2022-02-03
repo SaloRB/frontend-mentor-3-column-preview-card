@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  /* Primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  /* paragraphs */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* background, headings, buttons */
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--very-light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--transparent-white);
+  margin-top: 2rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  background-color: var(--very-light-gray);
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--very-light-gray);
+  border-radius: 30px;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+a:hover {
+  background-color: transparent;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  padding: 2rem;
+}
+
+.sedan {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.sedan a {
+  color: var(--bright-orange);
+}
+
+.suv {
+  background-color: var(--dark-cyan);
+}
+
+.suv a {
+  color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.luxury a {
+  color: var(--very-dark-cyan);
+}
+
+.sedan a:hover,
+.suv a:hover,
+.luxury a:hover {
+  color: var(--very-light-gray);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+
+  .card {
+    padding: 3rem;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .card-button {
+    margin-top: auto;
+  }
+
+  .sedan {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .luxury {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+  }
+}
